@@ -43,7 +43,7 @@ const postSlice = createSlice({
   reducers: {
     addPost(state, action) {
       const { userId, caption, imgUrl, id } = action.payload;
-      state.posts.push({ userId, caption, imgUrl, id });
+      state.posts.unshift({ userId, caption, imgUrl, id });
     },
     removePost(state, action) {
       const postId = action.payload;
